@@ -444,27 +444,30 @@ p.event-text {
 
 /* ABOUT US PAGE */
 
+
 div#about-cnt {
-    width: 100%;
+   
+    width: 1000px;
     height: 600px;
     justify-content: center;
     margin: auto;
-    padding: 0 70px;
+    /* padding: 0 70px; */
 }
 
+
 img#about-image {
-    float: left;
     margin: auto;
-    padding: 30px;
-    width: 50%;
+    width: 100%;
     height: auto;
+    display: block;
+    border: 1px solid white;
 }
 
 p#about-text {
-    padding: 30px 30px;
+   
     color: #fff;
     text-align: justify;
-    margin: 0 10px 0 10px;
+    margin: 40px 10px 0 10px;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
 }
@@ -473,19 +476,21 @@ p.clear {
     clear: right;
 }
 
+/* Team cards */
+
 .team-title {
     text-align: center;
     color: #D9C8A2;
     font-family: 'Forum', cursive;
     font-size: 27px;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 400px;
 }
 
 .team-container {
     position: relative;
-    width: 100%; 
-    margin: 100px auto 0;
+    width: 1000px;
+    margin: 70px auto 0;
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -499,7 +504,7 @@ p.clear {
    margin: 0 auto;
    background: #d5c3aa;
    overflow: hidden;
-   border-radius: 10px;
+   border: 1px solid white;
    transition: .5s;
   }
   
@@ -541,15 +546,15 @@ p.clear {
   }
   
   .team-container .card:nth-child(1) .content {
-    background: linear-gradient(0deg, #555555, transparent);
+    background: linear-gradient(1deg, #2D312B, transparent);
   }
   
   .team-container .card:nth-child(2) .content {
-    background: linear-gradient(0deg, #27408B, transparent);
+    background: linear-gradient(0deg, #2D312B, transparent);
   }
   
   .team-container .card:nth-child(3) .content {
-    background: linear-gradient(0deg, #555555, transparent);
+    background: linear-gradient(0deg, #2D312B, transparent);
   } 
   
   .team-container .card .content h2 {
@@ -557,11 +562,16 @@ p.clear {
     padding: 0;
     color: #F8F8FF;
     font-size: 20px;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px black;
   }
   
   .team-container .card .content h2 span {
     color: #fff;
     font-size: 16px;
+    background: transparent;
+    font-family: 'Raleway', sans-serif;
   }
   
   .team-container .card .content p {
@@ -569,6 +579,9 @@ p.clear {
     padding: 0;
     color: #fff;
     font-size: 16px;
+    background: transparent;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
   }
   
   .team-container .card .content ul {
@@ -577,22 +590,38 @@ p.clear {
   padding: 0;
   align-items: center;
   justify-content: center;
+  background: transparent;
   }
   
   .team-container .card .content ul li {
     list-style: none;
+    background: transparent;
   }
+
   
   .team-container .card .content ul li a {
     color: #fff; 
-    padding: 0 10px;
+    margin: 0 10px;
     font-size: 18px;
     transition: 0.5s;
+    background: transparent;
   }
 
+  .fab {
+    background: transparent;
+  }
 
+  .fa-facebook-f:hover {
+      color: #4267b2;
+  }
 
+  .fa-twitter:hover {
+      color:  #1da1f2;
+  }
 
+  .fa-linkedin-in:hover {
+    color: #007bb5;
+  }
 
 
 
