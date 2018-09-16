@@ -207,60 +207,23 @@ div.slide5 {
     }
 }
 
-/* Feature box */
+/* FEATURES COLUMNS*/
 
-div.feature-container {
+.features {
     width: 1000px;
-    height: 340px;
-    display: block;
-    margin: 80px auto 60px auto;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 30px;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+    margin: 50px auto;
 }
 
-div.feature-item {
-    width: 270px;
-    height: 400px;
+.features img {
+    width: 85%;
+    margin-top: 40px;
 }
 
-div h1.feature-title {
-    color: #D9C8A2;
-    font-family: 'Forum', cursive;
-    font-size: 27px;
-    font-weight: 400;
-}
-
-div.feature-image {
-    width: 100%;
-    /* height: 100%; */
-    height: 150px;
-    cursor: pointer;
-    margin: 20px 0;
-    background-position: center;
-    background-size: 100%;
-    transition: all 0.4s ease-in-out;
-}
-
-div.feature-image:hover {
-    background-size: 130%;
-}
-
-div.lunch {
-    background-image: url("features/business-lunch.jpg")
-}
-
-div.special-offer {
-    background-image: url("features/special-offers.jpg")
-}
-
-div.events {
-    background-image: url("features/event.jpg")
-}
-
-div.celebrate {
-    background-image: url("features/celebrate.jpg")
+.feature-item {
+    margin-right: 20px;
 }
 
 p.feature-description {
@@ -273,6 +236,20 @@ p.feature-description {
     text-align: justify;
     word-spacing: 2px;
     line-height: 23px;
+    padding: 0 45px 0 0;
+}
+
+div.feature-item {
+    width: 333px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+div h1.feature-title {
+    color: #D9C8A2;
+    font-family: 'Forum', cursive;
+    font-size: 27px;
+    font-weight: 400;
 }
 
 a.feature-read {
@@ -308,7 +285,6 @@ div.footer-column {
     width: 340px;
     height: 200px;
     text-align: center;
-
 }
 
 h1.footer-titles {
@@ -802,7 +778,7 @@ textarea:focus {
 /* MEDIA QUERIES */
 
 
-@media (max-width: 1010px) {
+@media (max-width: 1100px) {
 
     body,
     html {
@@ -817,26 +793,23 @@ textarea:focus {
         max-width: 100%;
     }
 
-    div.slider-container {
-        max-width: 90%;
+    img.feature-img {
+        width: 300px;
+        /* height: 100%; */
+        height: 200px;
+        cursor: pointer;
+        margin: 20px 0;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.4s ease-in-out;
     }
-
-   .feature-container {
-       padding-left: 50px;
-       padding-right: 50px;
-   }
-
-    
-
-
-
 
 
 }
 
 /* ------------MOBILE ----------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 756px) {
 
     body,
     html {
@@ -854,18 +827,11 @@ textarea:focus {
     /* NAVIGATION */
     div.navbar {
         width: 100%;
-        height: 200px;
-    }
-
-    div.navbar ul.navigation {
-        display: block;
-        margin: auto;
+        height: 70px;
     }
 
     ul.navigation {
-        margin-left: 170px;
-        margin-bottom: 240px;
-        width: 90px;
+        margin: 40px auto;
     }
 
     div.navbar ul.navigation li {
@@ -878,24 +844,24 @@ textarea:focus {
     }
 
     /* FEATURE ITEMS */
-    div.feature-container {
+    div.features {
         width: 100%;
-        height: 100%;
+        height: 300px;
         display: block;
         text-align: center;
     }
 
     div.feature-item {
         width: 100%;
-        height: 220px;
+        height: 550px;
         margin: 40px auto 10px auto;
         padding: 10px;
         display: block;
     }
 
-    div.feature-image {
+    img.feature-img {
         width: 100%;
-        height: 100px;
+        height: auto;
         cursor: auto;
         background-repeat: no-repeat;
     }
@@ -928,12 +894,6 @@ textarea:focus {
 
     p#opening {
         justify-content: center;
-    }
-
-    #contact-form {
-        margin: -45px auto auto auto;
-        width: 270px;
-        height: 170px;
     }
 
     footer {
