@@ -73,6 +73,7 @@ li.navigation-item {
 li.navigation-item:hover {
     border-bottom: 2px solid #BDBDBD;
     border-radius: 50%;
+    color: #C7C7C7;
 }
 
 li.current-page {
@@ -87,7 +88,6 @@ div.slider-container {
     width: 1000px;
     height: 400px;
     box-sizing: border-box;
-    /* didn't know before */
     display: block;
     overflow: hidden;
     border: 2px solid #FCFCFA;
@@ -98,11 +98,8 @@ div.slide {
     width: 20%;
     height: 400px;
     background-repeat: no-repeat;
-    /* never used before */
     background-size: cover;
-    /* never used before */
     background-position: center;
-    /* never used before */
     float: left;
 }
 
@@ -225,7 +222,7 @@ div.feature-container {
 
 div.feature-item {
     width: 270px;
-    height: 100px;
+    height: 400px;
 }
 
 div h1.feature-title {
@@ -340,19 +337,18 @@ p.footer-text {
 }
 
 
-
-
-
 /* Copyright footer */
 
 
 footer {
-    color: #fff;
+    color: #D4D4D4;
+    font-size: 18px;
     padding-left: 30px;
     padding-bottom: 20px;
     font-family: 'Encode Sans', sans-serif;
-    color: #706d6d;
     margin-top: 100px;
+    text-align: center;
+    opacity: .6;
 }
 
 
@@ -550,7 +546,7 @@ p.clear {
     width: 300px;
     height: 440px;
     margin: 0 auto;
-    background: #d5c3aa;
+    background: #c09d6d;
     overflow: hidden;
     border: 1px solid white;
     transition: .5s;
@@ -713,11 +709,10 @@ p.clear {
 /* RESERVATION Page */
 
 .wrapper {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+    width: 1000px;
+    height: 550px;
     padding: 0 20px;
+    margin: 0 auto;
 }
 
 .contact-form {
@@ -729,9 +724,76 @@ p.clear {
 
 .input-fields {
     display: flex;
-    /* flex-direction: column;  */
+    flex-direction: column;
     margin-right: 4%;
 }
+
+.input-fields,
+.msg {
+    width: 100%;
+}
+
+.input-fields .input,
+.msg textarea {
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid grey;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+
+}
+
+.msg textarea {
+    height: 150px;
+}
+
+::-webkit-input-placeholder {
+    color: #c09d6d;
+    font-size: 15px;
+    font-family: 'Roboto';
+    font-weight: 300;
+
+}
+
+::-moz-input-placeholder {
+    color: #c09d6d;
+}
+
+::-ms-input-placeholder {
+    color: #c09d6d;
+}
+
+.btn {
+    background: #C1C1C1;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    background: grey;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: .8;
+}
+
+.btn:hover {
+    transition: .5s;
+    color: black;
+    background: darkgray;
+}
+
+input:focus {
+    outline: 0;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
 
 
 
@@ -739,17 +801,12 @@ p.clear {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1000px) {
+
+@media (max-width: 1010px) {
 
     body,
     html {
         overflow-x: hidden;
-    }
-
-    div.logo-container {
-        width: 100%;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
     }
 
     div.tagline {
@@ -761,8 +818,20 @@ p.clear {
     }
 
     div.slider-container {
-        max-width: 100%;
+        max-width: 90%;
     }
+
+   .feature-container {
+       padding-left: 50px;
+       padding-right: 50px;
+   }
+
+    
+
+
+
+
+
 }
 
 /* ------------MOBILE ----------------- */
