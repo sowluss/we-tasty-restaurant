@@ -82,6 +82,10 @@ li.current-page {
     color: #d5b276;
 }
 
+.mobile-navbar {
+    display: none;
+}
+
 /* SLIDER CONTAINER */
 
 div.slider-container {
@@ -253,7 +257,7 @@ div h1.feature-title {
 }
 
 a.feature-read {
-    background-color: #D9D4CD;
+    background-color: #9B9E95;
     color: black;
     padding: 5px 20px;
     cursor: pointer;
@@ -262,7 +266,7 @@ a.feature-read {
 }
 
 a.feature-read:hover {
-    background-color: #9B9E95;
+    background-color: #D9D4CD;
 }
 
 .fas {
@@ -405,6 +409,10 @@ span.time {
 
 /* EVENT PAGE */
 
+.mobile-event-images {
+    display: none;
+}
+
 .event-title {
     text-align: center;
     color: #D9C8A2;
@@ -462,11 +470,9 @@ p.event-text {
     font-weight: 300;
 }
 
-/* ABOUT US PAGE */
-
+/* ABOUT US  */
 
 div#about-cnt {
-
     width: 1000px;
     height: 600px;
     justify-content: center;
@@ -643,6 +649,10 @@ p.clear {
     color: #007bb5;
 }
 
+.mobile-team-block {
+    display: none;
+}
+
 
 /* GALLERY PAGE */
 
@@ -771,45 +781,15 @@ textarea:focus {
 }
 
 
-
-
 /* ************************************************************* */
+
 
 /* MEDIA QUERIES */
 
 
-@media (max-width: 1100px) {
+/* ------------ 1000 px ----------------- */
 
-    body,
-    html {
-        overflow-x: hidden;
-    }
-
-    div.tagline {
-        width: 100%;
-    }
-
-    ul.navigation {
-        max-width: 100%;
-    }
-
-    img.feature-img {
-        width: 300px;
-        /* height: 100%; */
-        height: 200px;
-        cursor: pointer;
-        margin: 20px 0;
-        background-position: center;
-        background-size: 100%;
-        transition: all 0.4s ease-in-out;
-    }
-
-
-}
-
-/* ------------MOBILE ----------------- */
-
-@media (max-width: 756px) {
+@media (max-width: 1000px) {
 
     body,
     html {
@@ -831,11 +811,12 @@ textarea:focus {
     }
 
     ul.navigation {
-        margin: 40px auto;
+        margin: 50px auto;
     }
 
-    div.navbar ul.navigation li {
+    .navbar ul li {
         padding: 10px;
+        margin-right: 20px;
     }
 
     /* SLIDER */
@@ -846,16 +827,17 @@ textarea:focus {
     /* FEATURE ITEMS */
     div.features {
         width: 100%;
-        height: 300px;
+        height: auto;
         display: block;
         text-align: center;
+        margin-top: 40px
     }
 
     div.feature-item {
-        width: 100%;
-        height: 550px;
-        margin: 40px auto 10px auto;
-        padding: 10px;
+        width: 60%;
+        height: 620px;
+        margin: 30px auto 30px auto;
+        padding: 50px;
         display: block;
     }
 
@@ -863,32 +845,36 @@ textarea:focus {
         width: 100%;
         height: auto;
         cursor: auto;
-        background-repeat: no-repeat;
     }
 
     p.feature-description {
-        margin: auto;
+        margin: 30px auto;
+        width: 100%;
+        padding: 0;
     }
 
     a.feature-read {
-        margin: auto;
-        font-size: 12px;
-        display: none;
+        margin: 30px auto;
+        font-size: 16px;
+        display: block;
+        padding: 15px;
     }
+
 
     /* Footer container */
     div.footer-container {
         width: 100%;
-        height: 200px;
+        height: auto;
         border-top: none;
         display: block;
+        margin: 30px auto 30px auto;
+        border-top: 1px solid white;
     }
 
-    /* Have no clue why div.footer-container doesn't not contain it's divs - div.footer-column whics are ouside of scope of their parent */
     div.footer-column {
         width: 100%;
         height: 100%;
-        margin: auto;
+        margin: 30px auto;
         text-align: center;
     }
 
@@ -900,9 +886,8 @@ textarea:focus {
         color: #fff;
         padding: 20px 10px 20px 10px;
         font-family: 'Encode Sans', sans-serif;
-        color: #706d6d;
         text-align: center;
-        font-size: 12px;
+        font-size: 18px;
     }
 
     /* MENU PAGE */
@@ -915,48 +900,64 @@ textarea:focus {
     }
 
     /*  EVENTS PAGE */
-    div.event-container {
+
+    .event-title {
+        margin-top: 40px;
+    }
+
+    .mobile-event-images {
         display: block;
         text-align: center;
-        width: 100%;
-        margin: 50px auto 0 auto;
+        margin-top: 40px;
     }
 
-    div.event-box {
-        /* margin: auto; */
-        width: 100%;
-        margin: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        display: block;
+    .mobile-event-images img {
+        max-width: 80%;
+        border: 1px solid white;
     }
 
-    img.event-image {
-        width: 100%;
-        height: auto;
-        margin: auto;
+    .event-desc {
+        margin: 60px 5px;
     }
 
-    p.event-text {
+    .event-desc p {
         color: #fff;
         text-align: justify;
-        padding: 15px;
-        width: 100%;
+        padding: 10px;
+        width: 80%;
         margin: auto;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
     }
 
-    /* ABOUT US PAGE */
+    .event-row-one {
+        display: none;
+    }
+
+    .event-row-two {
+        display: none;
+    }
+
+    .event-row-three {
+        display: none;
+    }
+
+
+
+    /* ABOUT US */
+
 
     div#about-cnt {
         width: 100%;
         height: auto;
-        margin: 30px auto;
+        margin: 40px auto;
     }
 
     img#about-image {
         margin: auto;
-        padding: 20px 0;
-        width: 100%;
+        padding: 0;
+        width: 80%;
         height: auto;
     }
 
@@ -965,9 +966,69 @@ textarea:focus {
         color: #fff;
         text-align: justify;
         /* margin: 0 auto; */
-        width: 100%;
-        margin: auto;
+        width: 80%;
+        margin: 20px auto;
+    }
 
+    .team-title {
+        margin-top: 80px;
+    }
+
+    .team-container {
+        display: none;
+    }
+
+    .mobile-team-block {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .team-card {
+        margin: 40px auto 60px auto;
+    }
+
+    .team-card img {
+        width: 40%;
+    }
+
+    .team-card h2 {
+        margin: 20px auto;
+        padding: 0;
+        color: #F8F8FF;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .team-card h2 span {
+        color: #C1C1C1;
+        font-size: 16px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .team-card ul {
+        display: flex;
+        margin: 20px 0 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .team-card ul li a {
+        color: #fff;
+        margin: 0 10px;
+        font-size: 20px;
+    }
+
+
+    .team-card p {
+        width: 40%;
+        text-align: justify;
+        margin: 20px auto;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 100;
+        font-family: 'Open Sans', sans-serif;
     }
 
     /* GALLERY PAGE */
@@ -985,5 +1046,124 @@ textarea:focus {
         width: 100%;
         margin-top: 20px;
     }
+
+}
+
+/* ********* 560px ************ */
+
+@media (max-width: 560px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: block;
+        text-align: center;
+    }
+
+    .mobile-navbar li {
+        margin-top: 20px;
+    }
+
+    ul.navigation {
+        width: 100%;
+        height: 200px;
+        display: block;
+        text-transform: uppercase;
+        margin: 40px auto;
+        justify-content: center;
+        margin-bottom: 0;
+
+    }
+
+    li.navigation-item {
+        color: white;
+        float: none;
+        font-size: 20px;
+        font-family: 'Forum', cursive;
+        padding: 0;
+        transition-duration: .5s;
+    }
+
+    li.navigation-item:hover {
+        border: none;
+        border-radius: 0;
+        color: #C7C7C7;
+    }
+
+    li.current-page {
+        border-bottom: none;
+        border-radius: 0;
+        color: #d5b276;
+    }
+
+    div.slider-container {
+        display: none;
+    }
+
+
+    /* FEATURE ITEMS */
+
+    div.feature-item {
+        width: 80%;
+        height: 520px;
+    }
+
+
+/* MENU */
+
+.menu-body {
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.menu-section {
+    margin-bottom: 80px;
+}
+
+.menu-section-title {
+    font-size: 25px;
+    margin: 20px 0 50px 0;
+}
+
+.menu-item {
+    margin: 35px 0;
+    font-size: 26px;
+}
+
+.menu-item-name {
+    font-size: 25px;
+}
+
+.menu-item-description {
+    font-size: 20px;
+     
+}
+
+.menu-item-price {
+    font-size: 25px;
+}
+
+img.menu-img {
+    display: none;
+}
+
+.hover-me:hover img.menu-img {
+    display: block;
+    width: 70%;
+    border: 1px solid white;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in 1 forwards;
+}
+
+.menu-item-name:hover {
+    cursor: pointer;
+    color: #efdcd8;
+    transition: .5s;
+}
+
+
+
 
 }
