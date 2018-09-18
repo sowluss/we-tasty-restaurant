@@ -663,8 +663,6 @@ p.clear {
 .gallery-container {
     max-width: 1000px;
     margin: 50px auto;
-    /* border: 1px solid #fff; */
-    /* background: #fff; */
 }
 
 .main-img img,
@@ -787,9 +785,9 @@ textarea:focus {
 /* MEDIA QUERIES */
 
 
-/* ------------ 1000 px ----------------- */
+/* ------------ 1012 px ----------------- */
 
-@media (max-width: 1000px) {
+@media (max-width: 1012px) {
 
     body,
     html {
@@ -990,6 +988,7 @@ textarea:focus {
 
     .team-card img {
         width: 40%;
+        border: 1px solid white;
     }
 
     .team-card h2 {
@@ -1048,6 +1047,19 @@ textarea:focus {
     }
 
 }
+
+
+/* ********* 687px ************ */
+
+@media (max-width: 690px) {
+
+/* FEATURE ITEMS */
+
+div.feature-item {
+    height: 500px;
+}
+}
+
 
 /* ********* 560px ************ */
 
@@ -1162,8 +1174,4 @@ img.menu-img {
     color: #efdcd8;
     transition: .5s;
 }
-
-
-
-
 }
