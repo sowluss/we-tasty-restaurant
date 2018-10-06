@@ -42,8 +42,8 @@ h1.logo-text {
 
 h1.logo-text:hover {
     color: #F6E4BE;
-    }
-    
+}
+
 
 div.tagline {
     color: #D59276;
@@ -75,14 +75,14 @@ li.navigation-item {
     padding: 0 20px 5px 20px;
     /* transition-duration: .5s; */
     transition: .5s ease-in-out;
-  
+
 }
 
 li.navigation-item:hover {
     border-bottom: 2px solid #BDBDBD;
     border-radius: 50%;
     color: #C7C7C7;
-    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
 }
 
@@ -375,7 +375,26 @@ footer {
     font-family: 'Forum', cursive;
     font-weight: bold;
     border-bottom: 2px dotted #D59276;
+/* shining effect */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #D9C8A2, #fff, #fff);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    /* changes visibility color of the text */
+    -webkit-text-fill-color: rgba(245, 216, 143, .8);
 }
+
+@keyframes animate {
+    0% {
+      background-position: -350%;
+    }
+    100% {
+      background-position: 350%;
+    }
+  }
 
 .menu-item-description {
     font-style: italic;
@@ -387,7 +406,8 @@ footer {
 .menu-item-price {
     float: right;
     font-family: 'Forum', cursive;
-    margin-top: -22px;
+    margin-top: -30px;
+    
 }
 
 img.menu-img {
@@ -788,6 +808,17 @@ textarea:focus {
     outline: 0;
 }
 
+/* Removal of Blue Highlight when Touch/Press object */
+
+ a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+ }
+
+ div {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+ }
 
 /* ************************************************************* */
 
@@ -814,7 +845,7 @@ textarea:focus {
 
     div.logo-container {
         width: 400px;
-       
+
     }
 
     /* NAVIGATION */
@@ -910,6 +941,14 @@ textarea:focus {
         display: block;
         color: #fff;
         padding-top: 15px;
+    }
+
+    .hover-me:hover img.menu-img {
+        display: block;
+        width: 70%;
+        border: 1px solid white;
+        opacity: 0;
+        animation: fadeIn 0.6s ease-in 1 forwards;
     }
 
     /*  EVENTS PAGE */
@@ -1068,11 +1107,11 @@ textarea:focus {
 
 @media (max-width: 690px) {
 
-/* FEATURE ITEMS */
+    /* FEATURE ITEMS */
 
-div.feature-item {
-    height: 500px;
-}
+    div.feature-item {
+        height: 500px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1150,61 +1189,60 @@ div.feature-item {
     }
 
 
-/* MENU */
+    /* MENU */
 
-.menu-body {
-    max-width: 800px;
-    margin-top: 30px;
-}
+    .menu-body {
+        max-width: 800px;
+        margin-top: 30px;
+    }
 
-.menu-section {
-    margin-bottom: 80px;
-}
+    .menu-section {
+        margin-bottom: 80px;
+    }
 
-.menu-section-title {
-    font-size: 25px;
-    margin: 20px 0 50px 0;
-}
+    .menu-section-title {
+        font-size: 25px;
+        margin: 20px 0 50px 0;
+    }
 
-.menu-item {
-    margin: 35px 0;
-    font-size: 26px;
-}
+    .menu-item {
+        margin: 35px 0;
+        font-size: 26px;
+    }
 
-.menu-item-name {
-    font-size: 25px;
-}
+    .menu-item-name {
+        font-size: 25px;
+    }
 
-.menu-item-description {
-    font-size: 20px;
-     
-}
+    .menu-item-description {
+        font-size: 20px;
+    }
 
-.menu-item-price {
-    font-size: 25px;
-}
+    .menu-item-price {
+        font-size: 25px;
+    }
 
-img.menu-img {
-    display: none;
-}
+    img.menu-img {
+        display: none;
+    }
 
-.hover-me:hover img.menu-img {
-    display: block;
-    width: 70%;
-    border: 1px solid white;
-    opacity: 0;
-    animation: fadeIn 0.6s ease-in 1 forwards;
-}
+    .hover-me:hover img.menu-img {
+        display: block;
+        width: 70%;
+        border: 1px solid white;
+        opacity: 0;
+        animation: fadeIn 0.6s ease-in 1 forwards;
+    }
 
-.menu-item-name:hover {
-    cursor: pointer;
-    color: #efdcd8;
-    transition: .5s;
-}
+    .menu-item-name:hover {
+        cursor: pointer;
+        color: #efdcd8;
+        transition: .5s;
+    }
 
-.team-card p {
-    text-align: justify;
-    width: 80%;
-}
+    .team-card p {
+        text-align: justify;
+        width: 80%;
+    }
 
 }
